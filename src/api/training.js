@@ -1,27 +1,3 @@
-import request from '../util/request'
-import pl from 'element-ui/src/locale/lang/pl'
-
-export const getWeekPlan =()=>{
-  return request({
-    url:'/weekPlan/getWeekPlan',
-    method:'post',
-  })
-}
-
-export const getPlans =()=>{
-  return request({
-    url:'/trainingPlanList/getPlans',
-    method:'post',
-  })
-}
-
-export const updatePlanById =(id,plan)=>{
-  return request({
-    url:'/weekPlan/updatePlanById',
-    method:'post',
-    data:{
-      id:id,
-      plan:plan
-    }
-  })
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b37c3182f89433d5cd5ddca2e274e62d62466749edcbb21f25fc78b9dde8f3a9
+size 479

@@ -1,10 +1,3 @@
-import axios from 'axios'
-
-const instance = axios.create({
-  //本地：http://localhost:8080
-  //部署时：http://192.168.199.88:8080
-  baseURL: 'http://192.168.199.88:8080',
-  timeout: 50000,
-});
-
-export default instance;
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc699091a3053df8617bfea1fb5297eabe517c9e38a2d37838fca53c5a22a75a
+size 226

@@ -1,18 +1,3 @@
-import axios from 'axios'
-
-axios({
-  method: 'get',
-  url: '/chatGPT/chat',
-  responseType: 'stream'
-}).then(response => {
-  const eventSource = new EventSource('/chatGPT/chat');
-
-  eventSource.onmessage = function(event) {
-    const data = JSON.parse(event.data);
-    // 处理数据
-  };
-
-  eventSource.onerror = function(event) {
-    // 处理错误
-  };
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:49f1550107c134340be333c99b4c3cce0c984f2690de11b50facffc85f454623
+size 380

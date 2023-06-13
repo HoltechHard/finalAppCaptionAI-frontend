@@ -1,19 +1,3 @@
-import request from '../util/request'
-
-export const login =(username,password)=>{
-  return request({
-    url:'/login',
-    method:'post',
-    params:{
-      username:username,
-      password:password
-    }
-  })
-}
-
-export const logout =()=>{
-  return request({
-    url:'/logout',
-    method:'post',
-  })
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db7c0de3e580694a61db71217ff7d6067279edf95821f8766f2c08f0fdb93fbe
+size 305

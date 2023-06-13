@@ -1,31 +1,3 @@
-import request from '../util/request'
-
-export const addSignUpInfo =(competitionId)=>{
-  return request({
-    url:'/competitionsSignUpInfo/addSignUpInfo',
-    method:'post',
-    data:{
-      competitionId:competitionId,
-    }
-  })
-}
-
-export const getSignUpInfo =(competitionId)=>{
-  return request({
-    url:'/competitionsSignUpInfo/getSignUpInfo',
-    method:'post',
-    data:{
-      competitionId:competitionId,
-    }
-  })
-}
-
-export const cancelSignUp =(competitionId)=>{
-  return request({
-    url:'/competitionsSignUpInfo/cancelSignUp',
-    method:'post',
-    data:{
-      competitionId:competitionId,
-    }
-  })
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1f7881455305866b60de6784605c3488798de34ae8c88b7a9495483ff337244
+size 618

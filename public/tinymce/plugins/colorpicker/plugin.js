@@ -1,22 +1,3 @@
-/**
- * Copyright (c) Tiny Technologies, Inc. All rights reserved.
- * Licensed under the LGPL or a commercial license.
- * For LGPL see License.txt in the project root for license information.
- * For commercial licenses see https://www.tiny.cloud/
- *
- * Version: 5.7.1 (2021-03-17)
- */
-(function () {
-    'use strict';
-
-    var global = tinymce.util.Tools.resolve('tinymce.PluginManager');
-
-    function Plugin () {
-      global.add('colorpicker', function () {
-        console.warn('Color picker plugin is now built in to the core editor, please remove it from your editor configuration');
-      });
-    }
-
-    Plugin();
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:84f3f04cb463a7b11341f8fd3dda90a1e7aec9a8ea1a4992358bcc09509bce12
+size 627

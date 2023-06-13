@@ -1,22 +1,3 @@
-/**
- * Copyright (c) Tiny Technologies, Inc. All rights reserved.
- * Licensed under the LGPL or a commercial license.
- * For LGPL see License.txt in the project root for license information.
- * For commercial licenses see https://www.tiny.cloud/
- *
- * Version: 5.7.1 (2021-03-17)
- */
-(function () {
-    'use strict';
-
-    var global = tinymce.util.Tools.resolve('tinymce.PluginManager');
-
-    function Plugin () {
-      global.add('textcolor', function () {
-        console.warn('Text color plugin is now built in to the core editor, please remove it from your editor configuration');
-      });
-    }
-
-    Plugin();
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:43d6b01518c146b332c625cfe26117dc9e0023bf3ecf826dab8f79c54ef7172a
+size 623

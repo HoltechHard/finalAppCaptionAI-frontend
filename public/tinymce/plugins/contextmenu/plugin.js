@@ -1,22 +1,3 @@
-/**
- * Copyright (c) Tiny Technologies, Inc. All rights reserved.
- * Licensed under the LGPL or a commercial license.
- * For LGPL see License.txt in the project root for license information.
- * For commercial licenses see https://www.tiny.cloud/
- *
- * Version: 5.7.1 (2021-03-17)
- */
-(function () {
-    'use strict';
-
-    var global = tinymce.util.Tools.resolve('tinymce.PluginManager');
-
-    function Plugin () {
-      global.add('contextmenu', function () {
-        console.warn('Context menu plugin is now built in to the core editor, please remove it from your editor configuration');
-      });
-    }
-
-    Plugin();
-
-}());
+version https://git-lfs.github.com/spec/v1
+oid sha256:eedf9b9f407ecff6c0f85db7c2e86da9464948cae8b81cd2baac5ca9ff3d4330
+size 627
