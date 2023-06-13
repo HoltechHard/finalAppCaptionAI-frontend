@@ -1,11 +1,11 @@
 <template>
   <div>
-    <el-dialog :visible.sync="showDialog" v-on="$listeners" @open="onOpen" @close="onClose" title="添加队员">
+    <el-dialog :visible.sync="showDialog" v-on="$listeners" @open="onOpen" @close="onClose" title="Create account">
       <el-row :gutter="15">
         <el-form ref="elForm" :model="formData" :rules="rules" size="medium" label-width="100px">
           <el-col :span="12">
             <el-form-item label="ID" prop="username">
-              <el-input v-model="formData.username" placeholder="请输入ID" clearable :style="{width: '100%'}">
+              <el-input v-model="formData.username" placeholder="Please input ID" clearable :style="{width: '100%'}">
               </el-input>
             </el-form-item>
           </el-col>
@@ -18,16 +18,16 @@
           <el-col :span="12">
           </el-col>
           <el-col :span="12">
-            <el-form-item label="创建时间" prop="joinDate">
+            <el-form-item label="Date" prop="joinDate">
               <el-date-picker v-model="formData.joinDate" format="yyyy-MM-dd" value-format="yyyy-MM-dd"
-                :style="{width: '100%'}" placeholder="请选择入队时间" clearable></el-date-picker>
+                :style="{width: '100%'}" placeholder="choose date" clearable></el-date-picker>
             </el-form-item>
           </el-col>
         </el-form>
       </el-row>
       <div slot="footer">
-        <el-button @click="close">取消</el-button>
-        <el-button type="primary" @click="handelConfirm">确定</el-button>
+        <el-button @click="close">cancel</el-button>
+        <el-button type="primary" @click="handelConfirm">confirm</el-button>
       </div>
     </el-dialog>
   </div>
@@ -62,7 +62,7 @@ export default {
       rules: {
         username: [{
           required: true,
-          message: '请输入ID',
+          message: 'Please input ID',
           trigger: 'blur'
         }],
         vocation: [{
@@ -126,7 +126,7 @@ export default {
       this.$refs['elForm'].validate(valid => {
         if (!valid) return;
         insertUser(this.formData)
-        this.$emit('message','完成')
+        this.$emit('message','success!')
         this.$emit('getAllUsers')
         this.close()
       })

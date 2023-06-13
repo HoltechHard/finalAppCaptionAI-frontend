@@ -5,7 +5,7 @@
   <article class="markdown-body" v-html='this.allText'></article>
   <el-divider></el-divider>
   <el-form-item style="text-align: center">
-    <el-button style="text-align: center" type="primary" size="mini" id="disconnectSSE" @click="disconnect">停止输出</el-button>
+    <el-button style="text-align: center" type="primary" size="mini" id="disconnectSSE" @click="disconnect">stop generating</el-button>
   </el-form-item>
   <el-form-item :inline="true">
   <el-input
@@ -13,13 +13,13 @@
     type="textarea"
     :autosize="{maxRows: 10}"
     @keydown.shift.enter.native="sendMessage"
-    placeholder="请在此处提问,enter换行,shift+enter发送"
+    placeholder="'enter'change line,'shift+enter'send message"
     v-model="inputQuestionContent"
     :disabled="isTransferring">
   </el-input>
 <!--    <el-button type="primary" size="mini" style="width: 9%;margin-left: 1%" @click="sendMessage">发送</el-button>-->
     <el-form-item style="text-align: center">
-    <el-button type="primary" size="mini" @click="sendMessage">发送</el-button>
+    <el-button type="primary" size="mini" @click="sendMessage">send</el-button>
     </el-form-item>
   </el-form-item>
 </el-form>
@@ -102,7 +102,7 @@ export default {
       this.inputQuestionContent = ''
       // //新增答案框
       this.allText+= this.answerContent
-      //华沙：94.156.99.10:8080
+      //理工云服务器：http://192.168.199.88:8080
         const eventSource = new EventSourcePolyfill('http://localhost:8080/chatGPT/chat?message=' + this.encodeQuestion,
           {
             withCredentials: true

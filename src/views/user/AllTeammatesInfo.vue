@@ -4,7 +4,7 @@
     <!--  用户列表卡片-->
     <el-card class="box-card" style="width: 100%;height: 100%">
       <div slot="header" class="clearfix">
-        <span>队员名单</span>
+        <span>User List</span>
       </div>
       <el-form :inline="true" :model="users" class="demo-form-inline">
         <el-form-item label="ID：">
@@ -91,7 +91,6 @@
      */
     created () {
       this.getAllUsersNormalInfo()
-      this.getAllVocations()
     },
     components: {
       AddOrMinusPoints,

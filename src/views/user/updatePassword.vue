@@ -1,27 +1,27 @@
 <template>
   <div>
-    <el-dialog :visible.sync="showUpdatePassword" @close="close" title="更改密码">
-      <el-form ref="updatePassword" :model="formData" :rules="rules" size="mini" label-width="100px"
+    <el-dialog :visible.sync="showUpdatePassword" @close="close" title="update password">
+      <el-form ref="updatePassword" :model="formData" :rules="rules" size="mini" label-width="140px"
                label-position="left">
-        <el-form-item label="旧密码：" prop="oldPassword">
-          <el-input v-model="formData.oldPassword" placeholder="请输入旧密码"
+        <el-form-item label="old password：" prop="oldPassword">
+          <el-input v-model="formData.oldPassword" placeholder="please input old password"
                     clearable show-password maxlength="16" minlength="6" show-word-limit
                     :style="{width: '100%'}"></el-input>
         </el-form-item>
-        <el-form-item label="新密码：" prop="newPassword">
-          <el-input v-model="formData.newPassword" type="text" placeholder="请输入新密码，包含字母和数字，6-16个字符"
+        <el-form-item label="new password：" prop="newPassword">
+          <el-input v-model="formData.newPassword" type="text" placeholder="contain alphabet and number，6-16 characters"
                     clearable show-password maxlength="16" minlength="6" show-word-limit
                     :style="{width: '100%'}"></el-input>
         </el-form-item>
-        <el-form-item label="再次输入：" prop="reWriteNewPassword">
-          <el-input v-model="formData.reWriteNewPassword" placeholder="请再次输入新密码，包含字母和数字，6-16个字符"
+        <el-form-item label="again：" prop="reWriteNewPassword">
+          <el-input v-model="formData.reWriteNewPassword" placeholder="contain alphabet and number，6-16 characters"
                     clearable show-password maxlength="16" minlength="6" show-word-limit
                     :style="{width: '100%'}"></el-input>
         </el-form-item>
       </el-form>
       <div slot="footer">
-        <el-button @click="close">取消</el-button>
-        <el-button type="primary" @click="handelConfirm">确定</el-button>
+        <el-button @click="close">cancel</el-button>
+        <el-button type="primary" @click="handelConfirm">confirm</el-button>
       </div>
     </el-dialog>
   </div>

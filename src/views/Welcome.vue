@@ -1,16 +1,8 @@
 <template>
   <div>
-  <el-card>
-    <div slot="header">
-    <span>计划</span>
-  </div>
-  <el-steps :active="weekday-1" finish-status="success">
-    <el-step :title="item.day" :description="item.plan" v-for="item in plans"></el-step>
-  </el-steps>
-  </el-card>
     <el-card style="margin-top: 20px">
     <div slot="header">
-      <span>最新消息</span>
+      <span>News</span>
     </div>
       <el-table
         style="width: 100%"
@@ -66,8 +58,6 @@
       }
     },
     async created () {
-      this.getWeekPlan()
-      this.getNewestMessageList()
     },
     methods:{
       async getWeekPlan(){

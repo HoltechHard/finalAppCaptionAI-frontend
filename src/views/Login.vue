@@ -11,7 +11,7 @@
       <el-form :model="loginForm" :rules="loginRules" ref="loginForm" class="loginForm">
         <el-form-item>
           <div style="text-align: center">
-            <p style="font-size: 20px;font-weight: bold">SPbPU ChatGPT</p>
+            <p style="font-size: 20px;font-weight: bold">SPbPU AI</p>
           </div>
         </el-form-item>
         <el-form-item label="" prop="username">
@@ -21,7 +21,7 @@
           <el-input v-model="loginForm.password" prefix-icon="el-icon-lock" show-password></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="login('loginForm')" @keyup.enter="login('loginForm')" style="width: 100%">登录</el-button>
+          <el-button type="primary" @click="login('loginForm')" @keyup.enter="login('loginForm')" style="width: 100%">Login</el-button>
         </el-form-item>
       </el-form>
     </div>

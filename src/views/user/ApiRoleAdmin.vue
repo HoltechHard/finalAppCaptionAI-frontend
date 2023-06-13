@@ -3,7 +3,7 @@
       <el-dialog :visible.sync=apiRoleWindowVisible @close="close()" @>
           <el-transfer
             v-model="rolesHasThisAuthority"
-            :titles="['无此权限的角色','具有此权限的角色']"
+            :titles="['no authority','has authority']"
             :data="rolesList"
             :props="{
        key: 'role',

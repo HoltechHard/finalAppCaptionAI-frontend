@@ -14,8 +14,8 @@
           <img src="../assets/images/Emblem-spbpu.png">
 <!--          下拉菜单-->
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item icon="el-icon-lock" @click.native="changeShowUpdatePassword">修改密码</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-switch-button" @click.native="logout">登出</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-lock" @click.native="changeShowUpdatePassword">update password</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-switch-button" @click.native="logout">logout</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </div>

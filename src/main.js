@@ -8,9 +8,14 @@ import './assets/css/global.css'
 import VueWechatTitle from 'vue-wechat-title';
 import axios from 'axios'
 import 'github-markdown-css'
+import locale from 'element-ui/lib/locale'
+import en from 'element-ui/lib/locale/lang/en'
 
 Vue.use(VueWechatTitle)
 Vue.use(ElementUI)
+
+// 设置语言
+locale.use(en)
 
 Vue.config.productionTip = false
 

@@ -4,16 +4,16 @@
     <!--  用户列表卡片-->
     <el-card class="box-card" style="width: 100%;height: 100%">
       <div slot="header" class="clearfix">
-        <span>API管理</span>
+        <span>API Admin</span>
       </div>
       <ApiRoleAdmin :apiRoleWindowVisible="apiRoleWindowVisible" @changeShow="changeShowApiRoleWindowVisible"
       :choosedRowUrl="choosedRowUrl" @getAllApi="getAllApi"></ApiRoleAdmin>
       <el-form :inline="true" class="demo-form-inline">
-        <el-form-item label="查询API：">
-          <el-input clearable v-model="api" placeholder="输入API"></el-input>
+        <el-form-item label="search API：">
+          <el-input clearable v-model="api" placeholder="input API"></el-input>
         </el-form-item>
-        <el-form-item label="选择所属模块：">
-        <el-select v-model="module" placeholder="请选择模块">
+        <el-form-item label="choose module：">
+        <el-select v-model="module" placeholder="choose module">
           <el-option
             v-for="item in moduleOptions"
             :key="item.moduleName"
@@ -23,8 +23,8 @@
         </el-select>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" icon="el-icon-search" @click="getAllApi">查询</el-button>
-          <el-button type="primary" icon="el-icon-refresh" @click="reset">重置</el-button>
+          <el-button type="primary" icon="el-icon-search" @click="getAllApi">search</el-button>
+          <el-button type="primary" icon="el-icon-refresh" @click="reset">reset</el-button>
         </el-form-item>
       </el-form>
       <el-table
@@ -40,28 +40,28 @@
         </el-table-column>
         <el-table-column
           prop="module"
-          label="模块"
+          label="module"
           sortable
         >
         </el-table-column>
         <el-table-column
           prop="description"
-          label="功能"
+          label="description"
         >
         </el-table-column>
         <el-table-column
           prop="role"
-          label="拥有权限的角色"
+          label="role"
           >
         </el-table-column>
 
         <el-table-column
           :show-overflow-tooltip="true"
-          label="操作"
-          width="120px">
+          label="option"
+          width="140px">
           <template slot-scope="scope">
             <el-button type="warning" size="mini" icon="el-ico-delete" @click="changeShowApiRoleWindowVisible(scope.row.url)">
-              更改可访问角色
+              Authenticated Role
             </el-button>
           </template>
         </el-table-column>
@@ -70,7 +70,7 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="current"
-        :page-sizes="[6, 10, 20, 50]"
+        :page-sizes="[5, 10, 20, 50]"
         :page-size="100"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total">
@@ -103,7 +103,7 @@
         apiList: [],
         current: 1,
         total: undefined,
-        size: 6,
+        size: 5,
 
         allVocationsList: undefined,
         vocation: '',

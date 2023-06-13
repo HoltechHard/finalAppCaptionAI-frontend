@@ -4,15 +4,15 @@
     <!--  用户列表卡片-->
     <el-card class="box-card" style="width: 100%;height: 100%">
       <div slot="header" class="clearfix">
-        <span>角色管理</span>
+        <span>Role Admin</span>
       </div>
       <el-form :inline="true" class="demo-form-inline">
         <el-form-item>
-          <el-input clearable v-model="role" placeholder="输入角色名"></el-input>
+          <el-input clearable v-model="role" placeholder="input role"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" icon="el-icon-search" @click="getallRolesPageList">查询</el-button>
-          <el-button type="info" icon="el-icon-refresh" @click="addRole">添加</el-button>
+          <el-button type="primary" icon="el-icon-search" @click="getallRolesPageList">search</el-button>
+          <el-button type="info" icon="el-icon-refresh" @click="addRole">add</el-button>
         </el-form-item>
       </el-form>
       <el-table
@@ -23,7 +23,7 @@
       >
         <el-table-column
           type="index"
-          label="序号"
+          label="index"
           width="60px">
         </el-table-column>
         <el-table-column
@@ -33,10 +33,10 @@
         </el-table-column>
         <el-table-column
           :show-overflow-tooltip="true"
-          label="操作"
-          width="70px">
+          label="option"
+          width="100px">
           <template slot-scope="scope">
-            <el-button type="danger" size="mini" icon="el-ico-edit" @click="disabledRole(scope.row.id)">禁用</el-button>
+            <el-button type="danger" size="mini" icon="el-ico-edit" @click="disabledRole(scope.row.id)">forbidden</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -126,15 +126,15 @@
           await addRole(this.role)
           this.role = ''
           await this.getallRolesPageList()
-          this.$message("添加完成")
+          this.$message("completed")
         }else {
-          this.$message("请输入角色名")
+          this.$message("input role name")
         }
       },
 
       async disabledRole(ID){
         await disabledRole(ID)
-        this.$message("角色已禁用")
+        this.$message("this role is forbidden")
       }
     }
   }

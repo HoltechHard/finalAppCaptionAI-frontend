@@ -4,7 +4,7 @@
     <!--  用户列表卡片-->
     <el-card class="box-card" style="width: 100%;height: 100%">
       <div slot="header" class="clearfix">
-        <span>队员名单</span>
+        <span>User List</span>
       </div>
       <el-form :inline="true" :model="users" class="demo-form-inline">
         <insertUser :addVisible="addVisible" @changeShow="showAdd" @message="message" @getAllUsers="getAllUsers"
@@ -15,12 +15,12 @@
         <AuthorityAdmin :authorityVisible=authorityVisible @changeShow="closeAuthorityWindow"
                         :choosedRowUserInfo="choosedRowUserInfo"></AuthorityAdmin>
         <el-form-item label="ID：">
-          <el-input clearable v-model="users.username" placeholder="请输入ID">请输入用户名</el-input>
+          <el-input clearable v-model="users.username" placeholder="please input ID">please input ID</el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" icon="el-icon-search" @click="getAllUsers">查询</el-button>
-          <el-button type="info" icon="el-icon-refresh" @click="resetUsers">重置</el-button>
-          <el-button type="info" icon="el-icon-refresh" @click="showAddWindow">添加</el-button>
+          <el-button type="primary" icon="el-icon-search" @click="getAllUsers">search</el-button>
+          <el-button type="info" icon="el-icon-refresh" @click="resetUsers">reset</el-button>
+          <el-button type="info" icon="el-icon-refresh" @click="showAddWindow">add</el-button>
         </el-form-item>
       </el-form>
       <el-table
@@ -31,12 +31,12 @@
       >
         <el-table-column
           type="index"
-          label="序号"
+          label="index"
           width="60px">
         </el-table-column>
         <el-table-column
           prop="id"
-          label="账号">
+          label="account">
         </el-table-column>
         <el-table-column
           prop="username"
@@ -45,66 +45,34 @@
         </el-table-column>
         <el-table-column
           sortable
-          prop="vocation"
-          label="职业"
-        >
-        </el-table-column>
-        <el-table-column
-          sortable
-          prop="department"
-          label="分队/总队"
-        >
-        </el-table-column>
-        <el-table-column
-          sortable
           prop="joinDate"
-          label="入队时间"
+          label="joinDate"
         >
-        </el-table-column>
-        <el-table-column
-          prop="qqnumber"
-          label="QQ">
-        </el-table-column>
-
-        <el-table-column
-          prop="phoneNumber"
-          label="联系电话">
-        </el-table-column>
-        <el-table-column
-          prop="sumPoints"
-          label="总积分">
-        </el-table-column>
-          <el-table-column
-            prop="currentMonthPoints"
-            label="当月积分">
         </el-table-column>
         <el-table-column
           :show-overflow-tooltip="true"
-          label="操作"
+          label="option"
           width="360px">
           <template slot-scope="scope">
-            <el-button type="primary" size="mini" icon="el-ico-edit" @click="showAddOrMinusPointsWindowVisable(scope.row)">
-              奖惩积分
-            </el-button>
             <el-button type="primary" size="mini" icon="el-ico-edit" @click="showUpdateWindow(scope.row)">
-              信息更改
+              update
             </el-button>
             <el-button type="warning" size="mini" icon="el-ico-edit" @click="showAuthorityWindow(scope.row)">
-              角色配置
+              role
             </el-button>
               <el-popconfirm
                 @onConfirm="isForbiddenUserById(scope.row.id,scope.row.isEnabled)"
                 style="margin-left: 10px"
                 icon="el-icon-info"
                 icon-color="black"
-                title="确定进行此操作吗？"
+                title="Sure?"
               >
                 <el-button slot="reference" type="danger" size="mini" icon="el-ico-delete"
                 v-if="scope.row.isEnabled==='1'">
-                  禁用账号</el-button>
+                  deactivate</el-button>
                 <el-button slot="reference" type="danger" size="mini" icon="el-ico-delete"
                            v-if="scope.row.isEnabled==='0'">
-                  启用账号</el-button>
+                  activate</el-button>
               </el-popconfirm>
           </template>
         </el-table-column>
@@ -163,7 +131,6 @@
      */
     created () {
       this.getAllUsers()
-      this.getAllVocations()
     },
     components: {
       AddOrMinusPoints,

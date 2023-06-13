@@ -9,7 +9,7 @@ const routes = [
     path: '/',
     name: 'Login',
     component: () => import('../views/Login.vue'),
-    meta:{title:"SPbPU-ChatGPT"}
+    meta:{title:"AI Box"}
   },
   {
     path: '/main',
@@ -20,35 +20,41 @@ const routes = [
         path: '/Chat',
         name: 'Chat',
         component: () => import('../views/Chat/Chat.vue'),
-        meta:{title:"SPbPU-ChatGPT"}
+        meta:{title:"AI-ChatGPT"}
       },
       {
         path: '/welcome',
         name: 'welcome',
         component: () => import('../views/Welcome.vue'),
-        meta:{title:"SPbPU ChatGPT——欢迎回来！"}
+        meta:{title:"AI Box——Welcome！"}
       },
       {
         path: '/users',
         name: 'Users',
         component: () => import('../views/user/Users.vue'),
-        meta:{title:"SPbPU——用户管理"}
+        meta:{title:"AI Box——user management"}
       },
       {
         path: '/roleAdmin',
         name: 'roleAdmin',
         component: () => import('../views/user/RoleAdmin.vue'),
-        meta:{title:"SPbPU——角色管理"}
+        meta:{title:"SPbPU——role management"}
       },
 
       {
         path: '/ApiAdmin',
         name: 'ApiAdmin',
         component: () => import('../views/user/ApiAdmin.vue'),
-        meta:{title:"SPbPU——API管理"}
+        meta:{title:"AI Box——API management"}
+      },
+      {
+        path: '/Image',
+        name: 'Image',
+        component: () => import('../views/Image/Image.vue'),
+        meta:{title:"AI Box——Describe it!"}
       },
     ],
-    meta:{title:"Polytechnic University ChatGPT"}
+    meta:{title:"Polytechnic University AI Box"}
   },
 ]
 

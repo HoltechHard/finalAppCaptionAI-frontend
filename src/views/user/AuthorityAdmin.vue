@@ -3,7 +3,7 @@
       <el-dialog :visible.sync=showDialog @close="close()">
           <el-transfer
             v-model="hasRoles"
-            :titles="['未拥有角色','已拥有角色']"
+            :titles="['not has','has roles']"
             :data="rolesList"
             :props="{
        key: 'role',
@@ -13,8 +13,8 @@
 <!---->
           </el-transfer>
         <div slot="footer">
-          <el-button @click="close">取消</el-button>
-          <el-button type="primary" @click="confirm">确定</el-button>
+          <el-button @click="close">cacel</el-button>
+          <el-button type="primary" @click="confirm">confirm</el-button>
         </div>
       </el-dialog>
     </div>
